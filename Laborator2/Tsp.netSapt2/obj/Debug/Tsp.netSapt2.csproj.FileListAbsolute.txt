@@ -1,0 +1,9 @@
+C:\Users\Theo\source\repos\Tsp.netSapt2\Tsp.netSapt2\bin\Debug\Tsp.netSapt2.exe.config
+C:\Users\Theo\source\repos\Tsp.netSapt2\Tsp.netSapt2\bin\Debug\Tsp.netSapt2.exe
+C:\Users\Theo\source\repos\Tsp.netSapt2\Tsp.netSapt2\bin\Debug\Tsp.netSapt2.pdb
+C:\Users\Theo\source\repos\Tsp.netSapt2\Tsp.netSapt2\obj\Debug\Tsp.netSapt2.csprojAssemblyReference.cache
+C:\Users\Theo\source\repos\Tsp.netSapt2\Tsp.netSapt2\obj\Debug\Tsp.netSapt2.Form1.resources
+C:\Users\Theo\source\repos\Tsp.netSapt2\Tsp.netSapt2\obj\Debug\Tsp.netSapt2.Properties.Resources.resources
+C:\Users\Theo\source\repos\Tsp.netSapt2\Tsp.netSapt2\obj\Debug\Tsp.netSapt2.csproj.GenerateResource.cache
+C:\Users\Theo\source\repos\Tsp.netSapt2\Tsp.netSapt2\obj\Debug\Tsp.netSapt2.exe
+C:\Users\Theo\source\repos\Tsp.netSapt2\Tsp.netSapt2\obj\Debug\Tsp.netSapt2.pdb
