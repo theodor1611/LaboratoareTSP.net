@@ -1,0 +1,11 @@
+C:\Users\Theo\source\repos\PostComment\PostComment\bin\Debug\PostComment.dll.config
+C:\Users\Theo\source\repos\PostComment\PostComment\bin\Debug\PostComment.dll
+C:\Users\Theo\source\repos\PostComment\PostComment\bin\Debug\PostComment.pdb
+C:\Users\Theo\source\repos\PostComment\PostComment\bin\Debug\EntityFramework.dll
+C:\Users\Theo\source\repos\PostComment\PostComment\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Theo\source\repos\PostComment\PostComment\bin\Debug\EntityFramework.xml
+C:\Users\Theo\source\repos\PostComment\PostComment\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Theo\source\repos\PostComment\PostComment\obj\Debug\PostComment.csprojAssemblyReference.cache
+C:\Users\Theo\source\repos\PostComment\PostComment\obj\Debug\PostComment.csproj.CopyComplete
+C:\Users\Theo\source\repos\PostComment\PostComment\obj\Debug\PostComment.dll
+C:\Users\Theo\source\repos\PostComment\PostComment\obj\Debug\PostComment.pdb
