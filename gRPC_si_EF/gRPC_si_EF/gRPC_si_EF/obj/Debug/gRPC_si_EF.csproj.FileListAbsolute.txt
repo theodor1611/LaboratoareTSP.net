@@ -1,0 +1,11 @@
+C:\Users\Theo\source\repos\gRPC_si_EF\gRPC_si_EF\bin\Debug\gRPC_si_EF.dll.config
+C:\Users\Theo\source\repos\gRPC_si_EF\gRPC_si_EF\bin\Debug\gRPC_si_EF.dll
+C:\Users\Theo\source\repos\gRPC_si_EF\gRPC_si_EF\bin\Debug\gRPC_si_EF.pdb
+C:\Users\Theo\source\repos\gRPC_si_EF\gRPC_si_EF\bin\Debug\EntityFramework.dll
+C:\Users\Theo\source\repos\gRPC_si_EF\gRPC_si_EF\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Theo\source\repos\gRPC_si_EF\gRPC_si_EF\bin\Debug\EntityFramework.xml
+C:\Users\Theo\source\repos\gRPC_si_EF\gRPC_si_EF\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Theo\source\repos\gRPC_si_EF\gRPC_si_EF\obj\Debug\gRPC_si_EF.csprojAssemblyReference.cache
+C:\Users\Theo\source\repos\gRPC_si_EF\gRPC_si_EF\obj\Debug\gRPC_si_EF.csproj.CopyComplete
+C:\Users\Theo\source\repos\gRPC_si_EF\gRPC_si_EF\obj\Debug\gRPC_si_EF.dll
+C:\Users\Theo\source\repos\gRPC_si_EF\gRPC_si_EF\obj\Debug\gRPC_si_EF.pdb

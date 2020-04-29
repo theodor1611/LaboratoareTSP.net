@@ -1,0 +1,14 @@
+C:\Users\Theo\source\repos\gRPC_si_EF\Test\bin\Debug\Test.exe.config
+C:\Users\Theo\source\repos\gRPC_si_EF\Test\bin\Debug\Test.exe
+C:\Users\Theo\source\repos\gRPC_si_EF\Test\bin\Debug\Test.pdb
+C:\Users\Theo\source\repos\gRPC_si_EF\Test\bin\Debug\gRPC_si_EF.dll
+C:\Users\Theo\source\repos\gRPC_si_EF\Test\bin\Debug\EntityFramework.dll
+C:\Users\Theo\source\repos\gRPC_si_EF\Test\bin\Debug\gRPC_si_EF.pdb
+C:\Users\Theo\source\repos\gRPC_si_EF\Test\bin\Debug\gRPC_si_EF.dll.config
+C:\Users\Theo\source\repos\gRPC_si_EF\Test\bin\Debug\EntityFramework.xml
+C:\Users\Theo\source\repos\gRPC_si_EF\Test\obj\Debug\Test.csprojAssemblyReference.cache
+C:\Users\Theo\source\repos\gRPC_si_EF\Test\obj\Debug\Test.csproj.CopyComplete
+C:\Users\Theo\source\repos\gRPC_si_EF\Test\obj\Debug\Test.exe
+C:\Users\Theo\source\repos\gRPC_si_EF\Test\obj\Debug\Test.pdb
+C:\Users\Theo\source\repos\gRPC_si_EF\Test\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Theo\source\repos\gRPC_si_EF\Test\bin\Debug\EntityFramework.SqlServer.xml
