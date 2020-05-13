@@ -1,0 +1,11 @@
+C:\Users\Theo\source\repos\PostCommentRazerPages\ClientWCF\bin\Debug\ClientWCF.exe.config
+C:\Users\Theo\source\repos\PostCommentRazerPages\ClientWCF\bin\Debug\ClientWCF.exe
+C:\Users\Theo\source\repos\PostCommentRazerPages\ClientWCF\bin\Debug\ClientWCF.pdb
+C:\Users\Theo\source\repos\PostCommentRazerPages\ClientWCF\bin\Debug\EntityFramework.dll
+C:\Users\Theo\source\repos\PostCommentRazerPages\ClientWCF\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Theo\source\repos\PostCommentRazerPages\ClientWCF\bin\Debug\EntityFramework.xml
+C:\Users\Theo\source\repos\PostCommentRazerPages\ClientWCF\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Theo\source\repos\PostCommentRazerPages\ClientWCF\obj\Debug\ClientWCF.csprojAssemblyReference.cache
+C:\Users\Theo\source\repos\PostCommentRazerPages\ClientWCF\obj\Debug\ClientWCF.csproj.CopyComplete
+C:\Users\Theo\source\repos\PostCommentRazerPages\ClientWCF\obj\Debug\ClientWCF.exe
+C:\Users\Theo\source\repos\PostCommentRazerPages\ClientWCF\obj\Debug\ClientWCF.pdb

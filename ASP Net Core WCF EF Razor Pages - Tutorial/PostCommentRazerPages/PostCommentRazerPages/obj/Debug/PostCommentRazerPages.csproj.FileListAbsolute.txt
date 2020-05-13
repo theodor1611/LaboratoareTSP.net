@@ -1,0 +1,11 @@
+C:\Users\Theo\source\repos\PostCommentRazerPages\PostCommentRazerPages\bin\Debug\PostCommentRazerPages.dll.config
+C:\Users\Theo\source\repos\PostCommentRazerPages\PostCommentRazerPages\bin\Debug\PostCommentRazerPages.dll
+C:\Users\Theo\source\repos\PostCommentRazerPages\PostCommentRazerPages\bin\Debug\PostCommentRazerPages.pdb
+C:\Users\Theo\source\repos\PostCommentRazerPages\PostCommentRazerPages\bin\Debug\EntityFramework.dll
+C:\Users\Theo\source\repos\PostCommentRazerPages\PostCommentRazerPages\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Theo\source\repos\PostCommentRazerPages\PostCommentRazerPages\bin\Debug\EntityFramework.xml
+C:\Users\Theo\source\repos\PostCommentRazerPages\PostCommentRazerPages\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Theo\source\repos\PostCommentRazerPages\PostCommentRazerPages\obj\Debug\PostCommentRazerPages.csprojAssemblyReference.cache
+C:\Users\Theo\source\repos\PostCommentRazerPages\PostCommentRazerPages\obj\Debug\PostCommentRazerPages.csproj.CopyComplete
+C:\Users\Theo\source\repos\PostCommentRazerPages\PostCommentRazerPages\obj\Debug\PostCommentRazerPages.dll
+C:\Users\Theo\source\repos\PostCommentRazerPages\PostCommentRazerPages\obj\Debug\PostCommentRazerPages.pdb
