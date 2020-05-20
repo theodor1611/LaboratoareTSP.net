@@ -1,0 +1,11 @@
+C:\Users\Theo\source\repos\MyPhotosP2\MyPhotosP2\bin\Debug\MyPhotosP2.dll.config
+C:\Users\Theo\source\repos\MyPhotosP2\MyPhotosP2\bin\Debug\MyPhotosP2.dll
+C:\Users\Theo\source\repos\MyPhotosP2\MyPhotosP2\bin\Debug\MyPhotosP2.pdb
+C:\Users\Theo\source\repos\MyPhotosP2\MyPhotosP2\bin\Debug\EntityFramework.dll
+C:\Users\Theo\source\repos\MyPhotosP2\MyPhotosP2\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Theo\source\repos\MyPhotosP2\MyPhotosP2\bin\Debug\EntityFramework.xml
+C:\Users\Theo\source\repos\MyPhotosP2\MyPhotosP2\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Theo\source\repos\MyPhotosP2\MyPhotosP2\obj\Debug\MyPhotosP2.csprojAssemblyReference.cache
+C:\Users\Theo\source\repos\MyPhotosP2\MyPhotosP2\obj\Debug\MyPhotosP2.csproj.CopyComplete
+C:\Users\Theo\source\repos\MyPhotosP2\MyPhotosP2\obj\Debug\MyPhotosP2.dll
+C:\Users\Theo\source\repos\MyPhotosP2\MyPhotosP2\obj\Debug\MyPhotosP2.pdb
