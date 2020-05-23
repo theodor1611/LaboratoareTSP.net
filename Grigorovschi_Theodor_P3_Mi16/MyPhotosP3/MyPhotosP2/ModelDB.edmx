@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ModelDB.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ModelDBStoreContainer">
+    <EntitySet Name="Media" EntityType="ModelDB.Store.Media" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Proprietatis" EntityType="ModelDB.Store.Proprietatis" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MediaProprietati" EntityType="ModelDB.Store.MediaProprietati" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_MediaProprietati_Media" Association="ModelDB.Store.FK_MediaProprietati_Media">
+      <End Role="Media" EntitySet="Media" />
+      <End Role="MediaProprietati" EntitySet="MediaProprietati" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MediaProprietati_Proprietati" Association="ModelDB.Store.FK_MediaProprietati_Proprietati">
+      <End Role="Proprietati" EntitySet="Proprietatis" />
+      <End Role="MediaProprietati" EntitySet="MediaProprietati" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Media">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Path" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PozaSauVideo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Sters" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Proprietatis">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NumeCamp" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ValoareCamp" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="MediaProprietati">
+    <Key>
+      <PropertyRef Name="Media_Id" />
+      <PropertyRef Name="Proprietatis_Id" />
+    </Key>
+    <Property Name="Media_Id" Type="int" Nullable="false" />
+    <Property Name="Proprietatis_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_MediaProprietati_Media">
+    <End Role="Media" Type="ModelDB.Store.Media" Multiplicity="1" />
+    <End Role="MediaProprietati" Type="ModelDB.Store.MediaProprietati" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Media">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MediaProprietati">
+        <PropertyRef Name="Media_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MediaProprietati_Proprietati">
+    <End Role="MediaProprietati" Type="ModelDB.Store.MediaProprietati" Multiplicity="*" />
+    <End Role="Proprietati" Type="ModelDB.Store.Proprietatis" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Proprietati">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MediaProprietati">
+        <PropertyRef Name="Proprietatis_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ModelDB" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="ModelDBContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Media" EntityType="ModelDB.Media" />
+          <EntitySet Name="Proprietatis" EntityType="ModelDB.Proprietati" />
+          <AssociationSet Name="MediaProprietati" Association="ModelDB.MediaProprietati">
+            <End Role="Media" EntitySet="Media" />
+            <End Role="Proprietati" EntitySet="Proprietatis" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Media">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Path" Type="String" Nullable="false" />
+          <Property Name="PozaSauVideo" Type="String" Nullable="false" />
+          <Property Name="Sters" Type="String" Nullable="false" />
+          <NavigationProperty Name="Proprietatis" Relationship="ModelDB.MediaProprietati" FromRole="Media" ToRole="Proprietati" />
+        </EntityType>
+        <EntityType Name="Proprietati">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NumeCamp" Type="String" Nullable="true" />
+          <Property Name="ValoareCamp" Type="String" Nullable="true" />
+          <NavigationProperty Name="Media" Relationship="ModelDB.MediaProprietati" FromRole="Proprietati" ToRole="Media" />
+        </EntityType>
+        <Association Name="MediaProprietati">
+          <End Type="ModelDB.Media" Role="Media" Multiplicity="*" />
+          <End Type="ModelDB.Proprietati" Role="Proprietati" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelDBStoreContainer" CdmEntityContainer="ModelDBContainer">
+    <EntitySetMapping Name="Media">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelDB.Media)">
+        <MappingFragment StoreEntitySet="Media">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="PozaSauVideo" ColumnName="PozaSauVideo" />
+          <ScalarProperty Name="Sters" ColumnName="Sters" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Proprietatis">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelDB.Proprietati)">
+        <MappingFragment StoreEntitySet="Proprietatis">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NumeCamp" ColumnName="NumeCamp" />
+          <ScalarProperty Name="ValoareCamp" ColumnName="ValoareCamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="MediaProprietati" TypeName="ModelDB.MediaProprietati" StoreEntitySet="MediaProprietati">
+      <EndProperty Name="Media">
+        <ScalarProperty Name="Id" ColumnName="Media_Id" />
+      </EndProperty>
+      <EndProperty Name="Proprietati">
+        <ScalarProperty Name="Id" ColumnName="Proprietatis_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

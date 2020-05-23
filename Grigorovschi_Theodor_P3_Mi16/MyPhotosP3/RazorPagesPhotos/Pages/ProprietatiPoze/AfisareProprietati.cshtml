@@ -1,0 +1,39 @@
+﻿@page
+@model RazorPagesPhotos.Pages.ProprietatiPoze.AfisareProprietatiModel
+@{
+    ViewData["Title"] = "AfisareProprietati";
+}
+
+    <h1>Proprietatile pozei cu id-ul @ViewData["Photo"] sunt:</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Proprietatis[0].Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Proprietatis[0].NumeCamp)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Proprietatis[0].ValoareCamp)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Proprietatis)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NumeCamp)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ValoareCamp)
+                </td>
+                
+            </tr>
+            }
+        </tbody>
+    </table>

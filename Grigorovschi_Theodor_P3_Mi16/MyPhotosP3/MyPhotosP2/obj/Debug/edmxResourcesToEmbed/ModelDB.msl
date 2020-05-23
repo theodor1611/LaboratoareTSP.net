@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelDBStoreContainer" CdmEntityContainer="ModelDBContainer">
+    <EntitySetMapping Name="Media">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelDB.Media)">
+        <MappingFragment StoreEntitySet="Media">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="PozaSauVideo" ColumnName="PozaSauVideo" />
+          <ScalarProperty Name="Sters" ColumnName="Sters" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Proprietatis">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelDB.Proprietati)">
+        <MappingFragment StoreEntitySet="Proprietatis">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NumeCamp" ColumnName="NumeCamp" />
+          <ScalarProperty Name="ValoareCamp" ColumnName="ValoareCamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="MediaProprietati" TypeName="ModelDB.MediaProprietati" StoreEntitySet="MediaProprietati">
+      <EndProperty Name="Media">
+        <ScalarProperty Name="Id" ColumnName="Media_Id" />
+      </EndProperty>
+      <EndProperty Name="Proprietati">
+        <ScalarProperty Name="Id" ColumnName="Proprietatis_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

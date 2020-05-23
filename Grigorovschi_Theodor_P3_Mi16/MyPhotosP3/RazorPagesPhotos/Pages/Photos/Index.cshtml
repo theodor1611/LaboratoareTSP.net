@@ -1,0 +1,65 @@
+﻿@page
+@model RazorPagesPhotos.Pages.Photos.IndexModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+    <h1>Index</h1>
+    <h2>Numarul de poze selectate este: @ViewData["Cautare"]</h2>
+<h6>Pentru coloana "PozaSauVideo" "0" = Poza, "1" = Video.</h6>
+<h6>Pentru coloana "Sters" "0" = Nesters, "1" = Sters.</h6>
+<form>
+    <p>
+        Nume: <select asp-for="Prop" asp-items="Model.P">
+            <option value="">All</option>
+        </select>
+        Valoare: <input type="text" asp-for="ValoareC" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Medias[0].Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Medias[0].Path)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Medias[0].PozaSauVideo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Medias[0].Sters)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Medias)
+        {
+            <tr style="font-size:small">
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Path)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PozaSauVideo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sters)
+                </td>
+                <td>
+                    <a asp-page="/ProprietatiPoze/AfisareProprietati" asp-route-id="@item.Id">Proprietatile</a> 
+                    
+                    
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

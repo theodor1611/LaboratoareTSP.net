@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ModelDB" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="ModelDBContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Media" EntityType="ModelDB.Media" />
+    <EntitySet Name="Proprietatis" EntityType="ModelDB.Proprietati" />
+    <AssociationSet Name="MediaProprietati" Association="ModelDB.MediaProprietati">
+      <End Role="Media" EntitySet="Media" />
+      <End Role="Proprietati" EntitySet="Proprietatis" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Media">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Path" Type="String" Nullable="false" />
+    <Property Name="PozaSauVideo" Type="String" Nullable="false" />
+    <Property Name="Sters" Type="String" Nullable="false" />
+    <NavigationProperty Name="Proprietatis" Relationship="ModelDB.MediaProprietati" FromRole="Media" ToRole="Proprietati" />
+  </EntityType>
+  <EntityType Name="Proprietati">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NumeCamp" Type="String" Nullable="true" />
+    <Property Name="ValoareCamp" Type="String" Nullable="true" />
+    <NavigationProperty Name="Media" Relationship="ModelDB.MediaProprietati" FromRole="Proprietati" ToRole="Media" />
+  </EntityType>
+  <Association Name="MediaProprietati">
+    <End Type="ModelDB.Media" Role="Media" Multiplicity="*" />
+    <End Type="ModelDB.Proprietati" Role="Proprietati" Multiplicity="*" />
+  </Association>
+</Schema>

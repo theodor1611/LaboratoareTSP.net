@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModelDB.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ModelDBStoreContainer">
+    <EntitySet Name="Media" EntityType="ModelDB.Store.Media" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Proprietatis" EntityType="ModelDB.Store.Proprietatis" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MediaProprietati" EntityType="ModelDB.Store.MediaProprietati" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_MediaProprietati_Media" Association="ModelDB.Store.FK_MediaProprietati_Media">
+      <End Role="Media" EntitySet="Media" />
+      <End Role="MediaProprietati" EntitySet="MediaProprietati" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MediaProprietati_Proprietati" Association="ModelDB.Store.FK_MediaProprietati_Proprietati">
+      <End Role="Proprietati" EntitySet="Proprietatis" />
+      <End Role="MediaProprietati" EntitySet="MediaProprietati" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Media">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Path" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PozaSauVideo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Sters" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Proprietatis">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NumeCamp" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ValoareCamp" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="MediaProprietati">
+    <Key>
+      <PropertyRef Name="Media_Id" />
+      <PropertyRef Name="Proprietatis_Id" />
+    </Key>
+    <Property Name="Media_Id" Type="int" Nullable="false" />
+    <Property Name="Proprietatis_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_MediaProprietati_Media">
+    <End Role="Media" Type="ModelDB.Store.Media" Multiplicity="1" />
+    <End Role="MediaProprietati" Type="ModelDB.Store.MediaProprietati" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Media">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MediaProprietati">
+        <PropertyRef Name="Media_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MediaProprietati_Proprietati">
+    <End Role="MediaProprietati" Type="ModelDB.Store.MediaProprietati" Multiplicity="*" />
+    <End Role="Proprietati" Type="ModelDB.Store.Proprietatis" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Proprietati">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MediaProprietati">
+        <PropertyRef Name="Proprietatis_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
